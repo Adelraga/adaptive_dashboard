@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../cors/size_config.dart';
 import 'detailed_income_chart.dart';
 import 'income_chart.dart';
@@ -24,8 +22,13 @@ class IncomSectionBody extends StatelessWidget {
         : const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(child: IncomeChart()),
-              Expanded(flex: 2, child: IncomeDetails()),
+              Expanded(
+                child: IncomeChart(),
+              ),
+              Expanded(
+                flex: 2,
+                child: IncomeDetails(),
+              ),
             ],
           );
   }

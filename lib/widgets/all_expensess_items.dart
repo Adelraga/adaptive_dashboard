@@ -5,7 +5,10 @@ import 'package:responsive_app/cors/models/all_expensess_item_model.dart';
 import 'package:responsive_app/cors/styles.dart';
 
 class AllExpensessItems extends StatelessWidget {
-  const AllExpensessItems({super.key, required this.allExpensessItemModel, required this.isSelected});
+  const AllExpensessItems(
+      {super.key,
+      required this.allExpensessItemModel,
+      required this.isSelected});
 
   final AllExpensessItemModel allExpensessItemModel;
   final bool isSelected;
@@ -33,21 +36,24 @@ class AllExpensessItems extends StatelessWidget {
           ),
           Text(
             allExpensessItemModel.title,
-            style: AppStyles.styleMedium16.copyWith(color: isSelected ? Colors.white : Colors.black),
+            style: AppStyles.styleMedium16
+                .copyWith(color: isSelected ? Colors.white : Colors.black),
           ),
           SizedBox(
             height: 16,
           ),
           Text(
             allExpensessItemModel.date,
-            style: AppStyles.styleRegular14.copyWith(color: isSelected ? Colors.white : Colors.black),
+            style: AppStyles.styleRegular14
+                .copyWith(color: isSelected ? Colors.white : Colors.black),
           ),
           SizedBox(
             height: 16,
           ),
           Text(
             allExpensessItemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: isSelected ? Colors.white : Colors.black),
+            style: AppStyles.styleSemiBold24
+                .copyWith(color: isSelected ? Colors.white : Colors.black),
           ),
         ],
       ),
@@ -64,14 +70,27 @@ class AllExpensessItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          decoration: ShapeDecoration(
-            color: Color(0xFFFAFAFA),
-            shape: OvalBorder(),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 60,
+              // maxHeight: 80,
+            ),
+           
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                width: 60,
+                height: 60,
+                decoration: ShapeDecoration(
+                  color: Color(0xFFFAFAFA),
+                  shape: OvalBorder(),
+                ),
+                child:
+                    Center(child: SvgPicture.asset(fit: BoxFit.scaleDown, image)),
+              ),
+            ),
           ),
-          child: SvgPicture.asset(fit: BoxFit.scaleDown, image),
         ),
         Spacer(),
         Transform.rotate(

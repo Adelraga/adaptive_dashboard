@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 
+import 'all_expensess_and_quick_invoice_section.dart';
 import 'income_section.dart';
 import 'my_cards_and_transction_history_section.dart';
 
@@ -14,10 +14,9 @@ class DashboardMobileLayout extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-      
+          AllExpensessAndQuickInvoiceSection(),
           MyCardsAndTransctionHistorySection(),
           IncomeSection(),
-              // AllExpensessAndQuickInvoiceSection(),
         ],
       ),
     );
