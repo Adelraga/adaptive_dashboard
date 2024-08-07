@@ -17,3 +17,16 @@ it is a responsive UI design
   </tr>
 </table>
 
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+## Tablet UI
+
+<table>
+  <tr>
+    <th>Tablet UI</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/590e4ad2-40f9-4b20-9e48-44a3831cfe18" width="100" height="250"></td>
+    <td><img src="https://github.com/user-attachments/assets/71ff7f94-09d9-4396-ad42-bb7445a9ee6c" width="100" height="250"></td>
+  </tr>
+</table>
